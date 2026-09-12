@@ -2,6 +2,8 @@
 
 A static Astro portfolio built around The Impossible Room. The opening combines purpose-made portrait compositions with an authored Three.js room, directed by GSAP. Semantic HTML keeps Work, About, Training, Recognition and Contact available without completing the cinematic sequence.
 
+Live site: [takunda-maswi-portfolio.vercel.app](https://takunda-maswi-portfolio.vercel.app)
+
 ## Run locally
 
 ```powershell
