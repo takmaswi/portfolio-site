@@ -1,0 +1,49 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { contact, enquiries, enquiryUrl } from "../content/contact";
+---
+
+<Layout
+  title="Contact | Takunda Maswi"
+  description="Contact Takunda Maswi for software work, consulting, employment or practical AI training."
+>
+  <main id="main" class="inner-page contact-page">
+    <header class="page-intro">
+      <p class="eyebrow">Start a conversation</p><h1 class="display-title">
+        What are you<br />working on?
+      </h1><p class="lead">
+        A role, a product, a difficult workflow, or a team ready to work with
+        AI. Tell me where you want to go.
+      </p>
+    </header>
+    <section class="enquiry-options" aria-label="Ways to work with me">
+      {Object.entries(enquiries).map(([key, enquiry]) => (
+        <article>
+          <h2>{enquiry.title}</h2>
+          <p>{enquiry.description}</p>
+          <a class="action-button" href={enquiryUrl(key as keyof typeof enquiries)}>{enquiry.label} <span aria-hidden="true">↗</span></a>
+          {key === "role" && <a class="text-link" href={contact.cvUrl} download>Download my CV (PDF) ↓</a>}
+        </article>
+      ))}
+    </section>
+    <p class="action-note">Each enquiry opens an editable email. No mail app? Copy the address below into your email service.</p>
+    <a class="contact-email" href={`mailto:${contact.email}`}>{contact.email}</a
+    >
+    <div class="reading-grid">
+      <div class="prose">
+        <p>{contact.location} / {contact.timezone}</p><p>
+          Open to international opportunities.
+        </p><p>Email opens your mail app so you can write to me directly.</p>
+      </div>
+      <nav class="facts" aria-label="Professional profiles">
+        <a class="text-link" href={contact.github}
+          >GitHub <span aria-hidden="true">↗</span></a
+        ><a class="text-link" href={contact.linkedin}
+          >LinkedIn <span aria-hidden="true">↗</span></a
+        ><a class="text-link" href={contact.cvUrl} download
+          >Download my CV (PDF) <span aria-hidden="true">↓</span></a
+        >
+      </nav>
+    </div>
+  </main>
+</Layout>

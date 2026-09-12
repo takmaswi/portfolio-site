@@ -1,0 +1,35 @@
+# Image production record
+
+Tool: the built-in ChatGPT image generation tool, `image_gen.imagegen`. Its API exposed no model selector. Exact selection of ChatGPT Image 2.5 could not be confirmed. No CLI/API fallback was used.
+
+Source identity references are unchanged copies in `assets/references/`. The color image is primary for face and natural skin tone. The noir image supplied additional likeness context. These original references are not in `public/` and are not displayed on the site.
+
+All generated source variants are in `assets/generated/`. Optimized production WebPs are in `public/images/`. Generated portraits depict imagined architectural scenes, not documentary rooms or events. No generated image contains website text or a fabricated product interface. Actual product captures have separate provenance in content-evidence.md.
+
+## Sequence and production prompts
+
+### 1. room-plate.png
+Create a cinematic architectural background plate for an original portfolio titled The Impossible Room. No text, no people. Wide 16:9 composition, architectural photography, believable physically based materials. A monumental oxblood #721D32 lacquered hinged portal, rounded rectangular arch with very thick sculpted edges, stands inside a warm limestone #F2EDE5 gallery, ink-black ceiling, brushed silver precision hinges integrated into the two thick side leaves. Front camera at eye level, 45mm lens, restrained symmetric perspective with portal centered slightly right, open negative space on left for future website text. Portal opening reveals a deep dark room. Warm natural large softbox light from upper left, realistic contact shadows, subtle polished stone reflection, no floating objects, no spheres, no grids, no signage. Beautiful radical architecture, tactile fine grain, expensive architectural photograph. Floor visible lower third. This establishes camera and lighting for a person to be seated inside later.
+
+### 2. hero-desktop.png
+Inputs: color identity, noir likeness, room plate.
+Generate a NEW cinematic portrait for this man's personal portfolio. Image 1 PRIMARY identity and natural skin reference, image 2 supporting likeness only, image 3 architectural world. Exact recognizable facial structure, eyes, nose, rounded cheeks, lips, short textured hair, medium-dark warm brown natural skin. New full body seated relaxed upright on a minimalist oxblood leather low chair with brushed silver base, charcoal knitted crewneck, tailored dark charcoal trousers, black shoes. Hands relaxed independently on thighs with correct five fingers, small friendly confident smile like color reference. Do not slim face or body. Camera frontal eye-level 50mm with minimal perspective distortion. The man seated occupies right half of wide 16:9 image within oxblood portal opening from image 3, entire body and chair visible, physically correct floor contact and soft shadow. Warm limestone architecture, huge sculptural oxblood lacquer doorway with brushed silver hinges, light from upper left, room dark behind, strong negative space left for live text. Editorial photographic realism, natural pores. This is an imagined scene not documentary. No text, no extra people, no laptop, no props. Preserve likeness over stylization.
+
+### 3. seated-cutout.png
+Input: generated desktop portrait.
+Background extraction for a real-time 3D website. Isolate ONLY the exact seated man and his entire oxblood leather chair including silver chair base and both shoes from this image. Preserve the man exactly, his facial identity, expression, natural skin color, clothes, hands, anatomy, pose, lighting and proportions unchanged. Remove all architecture, walls, floor and shadows, leave a genuinely transparent alpha background, not a checkerboard or white backdrop. Tight portrait 3:4 framing around the entire man and chair with a small transparent margin. Both feet and entire chair must remain uncut. Do not invent or change any details. Clean fine alpha edges suitable for compositing.
+
+### 4. about.png
+Inputs: primary color identity and generated desktop scene.
+New supporting portrait in the same cinematic architectural production. Image 1 is PRIMARY facial identity and skin tone. Image 2 supplies wardrobe and world. Vertical 4:5 portrait, waist-up standing Takunda Maswi at right edge of a monumental oxblood lacquer portal, warm limestone visible left, soft natural light from upper left. Same recognizable rounded face, short textured hair, warm brown natural skin, nose, eyes and gentle smile, stocky natural proportions. Charcoal textured knitted crewneck and tailored trousers. One hand relaxed visible near pocket, anatomically normal. Looking directly into camera, approachable thoughtful expression. Beautiful close editorial photograph with believable pores and fabric, 65mm lens, no face thinning, no red tint to skin. More intimate than seated full body, meaningful architectural depth behind. No text, no symbols, no props.
+
+### 5. hero-mobile.png
+Inputs: primary color identity and generated desktop scene.
+Create a dedicated vertical 9:16 mobile composition of the SAME Impossible Room portrait production. Identity from first image, seated pose and outfit from second. Man centered in LOWER half, full seated body and entire oxblood chair visible with grounded shoes at bottom 10%, exact recognizable rounded face, warm brown skin, short hair and friendly smile from identity photo. Keep upper 38% mostly clear warm stone wall in soft light for future HTML headline. Monumental oxblood portal wraps the sides, brushed silver hinges visible, dark gallery depth behind man but top wall warm limestone, coherent light upper left. Same charcoal knitted crewneck trousers black shoes. Calm frontal camera 50mm, no wide-angle distortion. Architectural editorial photographic realism. No text, no extra hands, preserve proportions and face, no logo. Design specifically for a tall phone screen, not a narrow crop of the desktop.
+
+## Visual inspection and integration
+All five results were inspected. Seated and standing poses have plausible anatomy, intact visible hands, natural skin color and recognizable facial features. Alpha presence was verified in the cutout metadata. Final judgment of personal likeness remains Takunda's. Cutout foot placement, sill occlusion and scene exposure were corrected after browser inspection.
+
+The generated desktop/mobile compositions establish the opening and fallback. An authored occluding lacquer panel transitions into the real-time room. Three.js supplies actual portal geometry, hinged leaves, ceiling lift, silver supports, depth, shadows and lighting. GSAP coordinates scene progression and content transitions. The person remains a 2D photographic layer with constrained camera travel. Reflections use prepared environment lighting, not ray tracing. No claim is made that the person is fully modeled.
+
+Optimization uses Sharp for resizing and WebP encoding only. Original generated PNGs remain unchanged. Source room plate is retained for future production; the final moving architecture is modeled separately.

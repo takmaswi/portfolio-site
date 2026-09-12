@@ -1,0 +1,284 @@
+Build my complete personal website and portfolio. I am Takunda Maswi.
+
+Approach this with the judgment, ambition, and attention to detail expected of a seasoned Awwwards-winning creative developer and art director. Create original visual work with bespoke imagery, custom 3D, convincing materials, and carefully authored motion. Do not claim awards or experience you do not have.
+
+Complete asset creation, implementation, content, and verification before handing it back for review. Make routine decisions yourself. Do not stop after a plan, scaffold, hero section, or prototype. Ask only if an essential dependency genuinely prevents progress.
+
+CONTEXT AND DESTINATION
+
+My brand folder:
+C:\Users\Dell\OneDrive\Documents\Idea Hub\Claude\Taku brand
+
+Read:
+- taku.md
+- portfolio-prep\README.md
+- portfolio-prep\build-prompt.md
+- portfolio-cinematic-directions-v2.md
+
+This prompt overrides conflicting creative recommendations in those files, including earlier instructions about displaying the supplied portraits.
+
+Build in:
+C:\Users\Dell\OneDrive\Documents\Idea Hub\Claude\Taku brand\portfolio-site
+
+Preserve existing work. If that destination already contains an implementation, inspect it before changing anything. Treat the existing portfolio and carousel repositories as references.
+
+Follow applicable project instructions. Keep CLAUDE.md files and Claude configuration read-only.
+
+Use Astra at Medium reasoning. This does not mean you must use the Astro web framework. Choose a suitable stack for GSAP, Three.js, accessible content, and Vercel compatibility.
+
+ACCEPTED DIRECTION: THE IMPOSSIBLE ROOM
+
+I am the central human presence inside an extraordinary architectural space. As the visitor scrolls, the room unfolds and transforms around me.
+
+Moving architecture, changing light, custom mechanisms, perspective, and carefully staged reveals tell the story. Give the room believable materials, coherent lighting, depth, and a distinctive architectural motif.
+
+The room represents enduring capabilities:
+- Software engineering and systems thinking
+- AI and workflow automation
+- Creative development
+- Practical AI training and digital adoption
+
+My audience is international. Do not make Harare, Google, or any single project the theme of the website.
+
+Develop a complete visual journey with a memorable opening, meaningful transformations, opportunities to explore the work, and a considered ending. Maintain the same level of craft throughout the site.
+
+CONTENT MUST BE EASY TO UPDATE
+
+Projects belong in ONE reusable installation within the room. Visitors can switch projects through the same polished display and transition system.
+
+Awards and certificates belong in a compact, independently updatable recognition display.
+
+Adding a project or certificate must require only a content record and its assets. It must not require changing GSAP timelines, room geometry, shaders, or camera paths.
+
+Maintain separate content collections for:
+- Projects
+- Accomplishments and certificates
+- Capabilities
+- Services and training
+- Contact information
+
+Derive counts and navigation from the content. Handle different title lengths, image proportions, and project counts gracefully.
+
+PALETTE AND MATERIALS
+
+Use this palette for the first complete version:
+- Ink: #17191B
+- Warm stone: #F2EDE5
+- Oxblood: #721D32
+- Brushed silver: #B7B9B5
+- Terracotta: #E07A5F
+
+Use oxblood as a rich physical material, such as lacquer, upholstery, or a major architectural surface. Use silver for convincing mechanisms. Keep terracotta selective.
+
+Create visual variation through lighting, reflections, roughness, depth, and composition. Keep my skin tone natural.
+
+Use Inter and JetBrains Mono as the typography foundation. Develop strong hierarchy, spacing, and scale.
+
+ORIGINALITY AND VISUAL DISCIPLINE
+
+Use Impeccable for interface craft and Humanizer for public copy.
+
+Do not add random lines, rules, dividers, dashes, corner brackets, crosshairs, grids, or registration marks to fill empty space. Every visible element needs a compositional, architectural, or functional purpose.
+
+Avoid:
+- Generic purple and cyan AI gradients
+- Decorative particle clouds
+- Random chrome spheres
+- Glass cards and repetitive rounded panels
+- Fake terminal interfaces or telemetry
+- Scrolling technology-logo marquees
+- Oversized repeated background words
+- Arbitrary floating objects
+- Identical reveal animations on every section
+- Stock portfolio layouts disguised with motion
+- Decorative counters and unsupported statistics
+
+Empty space is allowed. Visual richness should come from original objects, image quality, composition, materials, lighting, and choreography.
+
+Make project transitions, navigation, About, training, Recognition, and Contact feel as carefully designed as the opening.
+
+BESPOKE IMAGE GENERATION IS REQUIRED
+
+My supplied photographs are IDENTITY REFERENCES ONLY:
+
+C:\Users\Dell\OneDrive\Documents\Idea Hub\Claude\Taku brand\portfolio-prep\portraits\takunda-color.png
+
+C:\Users\Dell\OneDrive\Documents\Idea Hub\Claude\Taku brand\portfolio-prep\portraits\takunda-noir.png
+
+Do not display these images unchanged on the finished website. Do not simply place them inside a new frame or use them as the final hero.
+
+Create NEW images of me specifically for the website. Produce suitable cinematic room compositions, seated or standing poses, varied framing, lighting, clothing treatments, and supporting portraits that match the new visual world.
+
+Use the supplied color portrait as the primary identity and skin-tone reference. Use the noir portrait as an additional likeness reference. Preserve my recognizable facial features, natural skin tone, and proportions.
+
+Change the scene and styling deliberately. Inspect every result for likeness, anatomy, perspective, and consistency. Reject distorted faces, incorrect hands, inconsistent proportions, and images that resemble a different person.
+
+Use ChatGPT image generation for these visuals. My requested model is ChatGPT Image 2.5. Check whether that exact model is available through the tools. If the available built-in image generation tool does not expose that model or a model selector, use the available built-in tool and disclose that exact model selection could not be confirmed. Never falsely claim to have used Image 2.5. Do not stall the build solely because the model label cannot be selected.
+
+Create assets through a deliberate sequence:
+1. Establish a strong room composition and camera framing.
+2. Generate a new portrait composition within that visual direction.
+3. Inspect and refine facial identity, lighting, anatomy, and perspective.
+4. Create consistent supporting scenes and portrait variations.
+5. Produce the separate layers needed for integration and movement.
+6. Integrate the assets and inspect them inside the actual website.
+
+Match the room's camera angle, light direction, palette, materials, and intended movement. Keep visual continuity across scenes.
+
+Generate suitable desktop and mobile compositions instead of forcing one crop into every viewport.
+
+Produce clean background plates, portrait cutouts, foreground layers, and masks where needed for depth and occlusion. Keep website text and actual product interfaces separate from generated artwork.
+
+Neither supplied image contains a seated full body. Create any required pose as a new composition using the identity references.
+
+A generated still is not a fully modeled person. Use camera paths that suit the representation. Build actual geometry where moving perspective requires it.
+
+Generate, inspect, and refine the assets as part of the complete build. Do not ask me to create them manually or stop after producing an asset list.
+
+Save source references, generated variants, selected production assets, and prompts inside the project. Keep the originals unchanged. Do not depend on temporary clipboard paths or leave production assets only in tool output folders.
+
+The final imagery must look like a coherent visual production made specifically for this website.
+
+CUSTOM 3D AND GSAP
+
+Use GSAP to coordinate scene progression, camera movement, object transforms, lighting changes, and content transitions. Use Three.js and custom shaders where needed.
+
+Build custom architecture and mechanisms that support the chosen concept. Do not substitute a static background with minor parallax for the promised spatial experience.
+
+Solve the hardest visual transition early, then continue through the full implementation without a routine approval pause.
+
+Pay attention to:
+- Contact shadows and reflections
+- Correct occlusion between my portrait and foreground objects
+- Camera continuity and perspective
+- Material roughness and believable scale
+- Fast, slow, and reverse scrolling
+- Responsive camera framing
+- Loading and transitions between scenes
+- Animation cleanup and resource disposal
+
+Use prepared lighting and background detail where appropriate. Measure performance and optimize expensive effects while preserving the defining visual moment.
+
+CONTENT AND POSITIONING
+
+Use taku.md as the factual source.
+
+My positioning includes building software, implementing AI automations, and helping teams use AI confidently in their everyday work.
+
+Include practical AI training and digital adoption as an offering. Explain it through concrete activities:
+- Choosing suitable tools
+- Applying AI to real work
+- Evaluating outputs
+- Improving workflows
+- Identifying useful automation opportunities
+
+Tool familiarity can support the story, but the website should communicate what I can do for people.
+
+Do not claim that I am objectively the world's best in AI. Establish credibility through real work, verified qualifications, and accurate recognition.
+
+Do not invent clients, testimonials, workshop history, affiliations, awards, user counts, revenue, or impact percentages.
+
+COPY REQUIREMENTS
+
+Use Humanizer for all public copy. Write with a confident, natural human voice. Prefer concrete descriptions and specific verbs.
+
+No em dashes or en dashes in public copy. Do not substitute strings of hyphens as decoration. Ordinary grammatical hyphens are acceptable where necessary.
+
+Avoid inflated phrases such as:
+- Unlock your potential
+- Transform your digital journey
+- Cutting-edge solutions
+- Seamless experiences
+- Where innovation meets creativity
+- Revolutionizing the future
+
+Avoid repetitive sentence structures, manufactured punchlines, and vague claims about innovation.
+
+Starting copy to refine:
+“I build software and AI automations, and help teams use AI confidently in their everyday work.”
+
+CERTIFICATE AND RECOGNITION
+
+My certificate:
+C:\Users\Dell\OneDrive\Documents\Idea Hub\Claude\Taku brand\portfolio-prep\credentials\google-ai-professional-certificate-FZSTEM28BXNS.pdf
+
+It is the Google AI Professional Certificate, dated 3 March 2026, covering seven courses.
+
+It is not seven professional certifications and does not establish Google-authorized trainer status. Include the verification URL printed on the certificate.
+
+Use the factual award information in taku.md. Do not associate an award with a particular product unless the evidence supports that connection.
+
+Keep recognition visually integrated and compact. It must remain easy to add future accomplishments without changing the cinematic experience.
+
+PROJECT IMAGERY
+
+Inspect the canonical project locations recorded in taku.md. Select three to five strong, current projects.
+
+Use current screenshots from real implementations where possible. Capture only sanitized or synthetic data.
+
+Generated imagery may serve as project artwork, but must not masquerade as evidence of implemented product features. Keep real interface captures distinct from conceptual covers.
+
+Do not expose private client, payroll, account, authentication, or identity information.
+
+COMPLETE WEBSITE
+
+Deliver:
+- The complete cinematic homepage
+- A reusable project installation and direct Work index
+- Individual project detail pages
+- About and capabilities
+- AI training and consulting information
+- Recognition and credentials
+- Clear contact routes
+- A current CV link if an appropriate public file is available
+
+Keep Work and Contact readily accessible throughout the experience. Use real links, usable browser history, and clear navigation.
+
+Contact must work honestly. If no submission backend is configured, use a verified email or existing contact route instead of a form that falsely claims to send.
+
+MOBILE AND ACCESSIBILITY
+
+Design mobile compositions deliberately. Preserve the signature transformation with appropriate camera paths, asset sizes, and scene complexity.
+
+Support:
+- Keyboard navigation
+- Visible focus
+- Readable text and sufficient contrast
+- System reduced-motion preferences
+- A motion control
+- A graceful WebGL fallback
+- Meaningful content in semantic HTML
+
+Allow visitors to access work and contact without completing the entire cinematic sequence.
+
+VERIFICATION
+
+Run the production build and inspect the actual website in a browser at desktop and mobile sizes.
+
+Exercise navigation, project switching, detail pages, contact routes, keyboard access, and reduced motion.
+
+Check for:
+- Broken or missing imagery
+- Facial distortion and inconsistent likeness
+- Clipped or unreadable text
+- Detached shadows and incorrect occlusion
+- Camera jumps and blank scenes
+- Motion that prevents reading or interaction
+- Unnecessary decorative lines and marks
+- Em dashes, en dashes, and inflated copy
+
+Verify that adding a temporary project record updates the display without modifying animation code. Remove the temporary record afterward.
+
+Use visual review to improve the result before handing it back. Do not stop simply because the code compiles.
+
+HANDOFF
+
+Finish with:
+- The full local website running and opened for review
+- The implementation path
+- The new generated images integrated into the site
+- Simple instructions for updating projects and certificates
+- A concise account of verification and any remaining limitations
+- An accurate statement of which image generation tool or model was used
+
+Do not deploy, publish, purchase services, commit, or push. The deliverable is the complete locally reviewable website.

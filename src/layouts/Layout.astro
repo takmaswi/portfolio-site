@@ -1,0 +1,150 @@
+---
+import "@fontsource-variable/inter";
+import "@fontsource/jetbrains-mono/500.css";
+import "../styles/global.css";
+import "../styles/conversion.css";
+import { contact } from "../content/contact";
+interface Props {
+  title?: string;
+  description?: string;
+  home?: boolean;
+}
+const {
+  title = "Takunda Maswi | Software, AI and creative development",
+  description = "I build software and AI automations, and help teams use AI confidently in their everyday work.",
+  home = false,
+} = Astro.props;
+const path = Astro.url.pathname;
+const nav = [
+  ["Work", "/work/"],
+  ["About", "/about/"],
+  ["Training", "/training/"],
+  ["CV", contact.cvUrl],
+  ["Contact", "/contact/"],
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" /><meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <title>{title}</title><meta name="description" content={description} /><meta
+      name="theme-color"
+      content="#F2EDE5"
+    />
+    <meta property="og:title" content={title} /><meta
+      property="og:description"
+      content={description}
+    /><meta property="og:type" content="website" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    {
+      home && (
+        <link
+          rel="preload"
+          as="image"
+          href="/images/hero-desktop.webp"
+          media="(min-width: 701px)"
+        />
+      )
+    }
+    {
+      home && (
+        <link
+          rel="preload"
+          as="image"
+          href="/images/hero-mobile.webp"
+          media="(max-width: 700px)"
+        />
+      )
+    }
+  </head>
+  <body class:list={[home ? "home-page" : "content-page"]}>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a href="/" class="wordmark" aria-label="Takunda Maswi home"
+        ><svg viewBox="0 0 100 100" width="34" height="34" aria-hidden="true"
+          ><rect x="12" y="16" width="40" height="24" rx="12" fill="#E9A28D"
+          ></rect><rect
+            x="48"
+            y="16"
+            width="40"
+            height="24"
+            rx="12"
+            fill="#E07A5F"></rect><rect
+            x="38"
+            y="28"
+            width="24"
+            height="60"
+            rx="12"
+            fill="#BF5942"></rect></svg
+        ><span
+          >Takunda Maswi<span class="wordmark-sub"
+            >Independent developer & AI consultant</span
+          ></span
+        ></a
+      >
+      <nav aria-label="Main navigation">
+        {
+          nav.map(([label, href]) => (
+            <a
+              href={href}
+              class:list={{ "nav-contact": label === "Contact" }}
+              download={label === "CV" ? "Takunda-Maswi-CV.pdf" : undefined}
+              aria-label={label === "CV" ? "Download my CV (PDF)" : undefined}
+              aria-current={path.startsWith(href) ? "page" : undefined}
+            >
+              {label}
+              {label === "Contact" && <span aria-hidden="true"> ↗</span>}
+            </a>
+          ))
+        }
+      </nav>
+      <button class="motion-control" type="button" aria-pressed="false"
+        >Motion <span data-motion-label>on</span></button
+      >
+    </header>
+    <slot />
+    <footer class="site-footer">
+      <a class="footer-name" href="/">Takunda Maswi</a><p>
+        Software. AI. Thoughtfully put to work.
+      </p><nav aria-label="Footer">
+        <a href="/recognition/">Recognition</a><a href={contact.github}
+          >GitHub ↗</a
+        ><a href={`mailto:${contact.email}`}>Email ↗</a>
+      </nav><small>© {new Date().getFullYear()} Takunda Maswi</small>
+    </footer>
+    <script>
+      const preference = window.matchMedia("(prefers-reduced-motion: reduce)");
+      const button =
+        document.querySelector<HTMLButtonElement>(".motion-control");
+      let explicit: string | null = null;
+      try {
+        explicit = localStorage.getItem("taku-motion");
+      } catch {}
+      function setMotion(reduced: boolean) {
+        document.documentElement.dataset.motion = reduced ? "reduced" : "full";
+        button?.setAttribute("aria-pressed", String(reduced));
+        const label = button?.querySelector("[data-motion-label]");
+        if (label) label.textContent = reduced ? "off" : "on";
+        window.dispatchEvent(
+          new CustomEvent("motionchange", { detail: { reduced } }),
+        );
+      }
+      setMotion(explicit ? explicit === "reduced" : preference.matches);
+      button?.addEventListener("click", () => {
+        const reduced = document.documentElement.dataset.motion !== "reduced";
+        explicit = reduced ? "reduced" : "full";
+        try {
+          localStorage.setItem("taku-motion", explicit);
+        } catch {}
+        setMotion(reduced);
+      });
+      preference.addEventListener("change", () => {
+        if (!explicit) setMotion(preference.matches);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { services } from "../content/services";
+import { contact, enquiryUrl } from "../content/contact";
+---
+
+<Layout
+  title="AI training | Takunda Maswi"
+  description="Practical AI training and digital adoption support, built around the work your team needs to do."
+>
+  <main id="main" class="inner-page">
+    <header class="page-intro">
+      <p class="eyebrow">AI training and adoption</p>
+      <h1 class="display-title">Make AI useful<br />in your working day.</h1>
+      <p class="lead">
+        Practical support for people and teams who want to understand the tools,
+        judge their outputs, and find a sensible place to start.
+      </p>
+      <div class="action-group"><a class="action-button" href={enquiryUrl("training")}>Discuss team training <span aria-hidden="true">↗</span></a></div>
+      <p class="action-note">Tell me your team's tasks and what you want to learn. We'll discuss scope and format by email.</p>
+    </header>
+    <section class="service-list" aria-label="Training topics">
+      {
+        services.map((service) => (
+          <article>
+            <>
+              <p class="eyebrow">{service.number}</p>
+              <h2>{service.title}</h2>
+              <p>{service.description}</p>
+              <ul>
+                {service.topics.map((topic) => (
+                  <li>{topic}</li>
+                ))}
+              </ul>
+            </>
+          </article>
+        ))
+      }
+    </section>
+    <section class="reading-grid">
+      <div class="prose">
+        <h2>Start with the work.</h2><p>
+          Tell me what your team does, which tools you already use, and where
+          people get stuck. We can agree the scope and format around that.
+        </p><p>
+          My practice includes hands-on use of Codex, Claude, and Perplexity,
+          alongside building AI systems and workflow automations.
+        </p>
+      </div>
+      <div class="facts">
+        <h2>Discuss a session</h2><p>
+          Individual support, team learning, or a closer look at a workflow.
+        </p><a
+          class="text-link"
+          href={`mailto:${contact.email}?subject=AI%20training%20enquiry`}
+          >Email about training <span aria-hidden="true">↗</span></a
+        >
+      </div>
+    </section>
+  </main>
+</Layout>

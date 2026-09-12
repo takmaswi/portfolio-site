@@ -1,0 +1,236 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { projects } from "../content/projects";
+import { capabilities } from "../content/capabilities";
+import { recognition } from "../content/recognition";
+import { contact, enquiryUrl } from "../content/contact";
+---
+
+<Layout home>
+  <main id="main">
+    <section class="room-journey" aria-label="The Impossible Room">
+      <div class="room-stage is-photo">
+        <picture class="room-fallback"
+          ><source
+            media="(max-width:700px)"
+            srcset="/images/hero-mobile.webp"
+          /><img
+            src="/images/hero-desktop.webp"
+            alt="Takunda seated in an imagined limestone room with an oxblood architectural portal"
+            width="1672"
+            height="941"
+            fetchpriority="high"
+          /></picture
+        >
+        <div id="room-canvas" aria-hidden="true"></div><div
+          class="portal-curtain"
+          aria-hidden="true"
+        >
+        </div>
+        <div class="hero-copy">
+          <p class="eyebrow">Software · AI · Creative development</p><h1>
+            <span>Takunda</span><span
+              >Maswi<span class="title-dot">.</span></span>
+          </h1><p class="hero-statement">
+            Need a product built or less manual work? I build software and AI
+            automations, and train teams to use AI with confidence.
+          </p>
+          <div class="action-group">
+            <a href={enquiryUrl("project")} class="action-button">Discuss my project <span aria-hidden="true">↗</span></a>
+            <a href={contact.cvUrl} download class="text-link">Download my CV <span aria-hidden="true">↓</span></a>
+          </div>
+          <a href="/work/" class="hero-work-link">See what I've built ↗</a>
+        </div>
+        <div class="opening-copy" aria-hidden="true">
+          <p class="eyebrow">A different way in</p><p>
+            Good systems<br />open possibilities.
+          </p>
+        </div>
+        <div class="room-caption">
+          <span>The Impossible Room</span><span class="scroll-instruction"
+            >Scroll to open <span aria-hidden="true">↓</span></span>
+        </div>
+        <section
+          class="work-installation"
+          id="selected-work"
+          aria-label="Selected work"
+        >
+          <div class="installation-intro">
+            <p class="eyebrow">Selected work</p><h2>
+              Ideas made<br />usable.
+            </h2><a class="text-link" href="/work/"
+              >All {projects.length} projects <span aria-hidden="true">↗</span
+              ></a>
+          </div>
+          <div class="project-display">
+            {
+              projects.map((project, index) => (
+                <article
+                  class="project-panel"
+                  data-project={project.slug}
+                  hidden={index !== 0}
+                  aria-label={project.title}
+                >
+                  <a
+                    class="installation-screen"
+                    href={`/work/${project.slug}/`}
+                    tabindex={index !== 0 ? -1 : undefined}
+                  >
+                    <img
+                      src={project.image}
+                      alt={project.imageAlt}
+                      width="1440"
+                      height="1000"
+                      loading="eager"
+                    />
+                  </a>
+                  <div class="project-caption">
+                    <>
+                      <div>
+                        <>
+                          <p class="eyebrow">{project.category}</p>
+                          <h3>
+                            <a href={`/work/${project.slug}/`}>
+                              {project.title}
+                              <span aria-hidden="true"> ↗</span>
+                            </a>
+                          </h3>
+                        </>
+                      </div>
+                      <p>{project.summary}</p>
+                    </>
+                  </div>
+                </article>
+              ))
+            }
+            {
+              projects.length === 0 && (
+                <p>
+                  New project notes are on their way.{" "}
+                  <a href="/contact/">Get in touch</a>.
+                </p>
+              )
+            }
+            <nav class="project-selector" aria-label="Choose a project">
+              {
+                projects.map((project, index) => (
+                  <button
+                    type="button"
+                    data-select-project={project.slug}
+                    aria-pressed={index === 0}
+                  >
+                    {project.title}
+                  </button>
+                ))
+              }
+            </nav>
+            <p class="sr-only" aria-live="polite" id="project-announcement"></p>
+          </div>
+        </section>
+      </div>
+    </section>
+    <section
+      class="capabilities-section section-pad"
+      aria-labelledby="capabilities-heading"
+    >
+      <div class="section-heading">
+        <p class="eyebrow">How I work</p><h2 id="capabilities-heading">
+          The whole system.<br />The human detail.
+        </h2>
+      </div>
+      <div class="capability-list">
+        {
+          capabilities.map((cap, index) => (
+            <article>
+              <>
+                <span class="capability-number">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <div>
+                  <>
+                    <h3>{cap.title}</h3>
+                    <p>{cap.description}</p>
+                  </>
+                </div>
+              </>
+            </article>
+          ))
+        }
+      </div>
+      <a href="/about/" class="text-link"
+        >Meet the person behind the work <span aria-hidden="true">↗</span></a
+      >
+    </section>
+    <section class="training-section" aria-labelledby="training-heading">
+      <div class="training-image">
+        <img
+          src="/images/about.webp"
+          alt="Takunda in the oxblood doorway of the imagined room"
+          width="1122"
+          height="1402"
+          loading="lazy"
+        />
+      </div>
+      <div class="training-copy">
+        <p class="eyebrow">AI training & consulting</p><h2
+          id="training-heading"
+        >
+          Put AI to work.<br />Keep your judgment.
+        </h2><p>
+          Bring the work your team actually does. We can choose suitable tools,
+          try them on real tasks, check the outputs, and find the workflows
+          worth automating.
+        </p><a class="light-button" href={enquiryUrl("training")}
+          >Discuss team training <span aria-hidden="true">↗</span></a
+        ><a href="/training/" class="text-link">See training topics ↗</a><p class="small-note">
+          Practical guidance for people using AI in everyday work.
+        </p>
+      </div>
+    </section>
+    <section
+      class="recognition-section section-pad"
+      aria-labelledby="recognition-heading"
+    >
+      <div>
+        <p class="eyebrow">Recognition & continued learning</p><h2
+          id="recognition-heading"
+        >
+          Work, backed<br />by learning.
+        </h2><a href="/recognition/" class="text-link"
+          >View credentials <span aria-hidden="true">↗</span></a>
+      </div><div class="recognition-preview">
+        {
+          recognition.map((item) => (
+            <article>
+              <p>{item.description}</p>
+              {item.url && (
+                <a href={item.url} class="text-link">
+                  Verify credential <span aria-hidden="true">↗</span>
+                </a>
+              )}
+            </article>
+          ))
+        }
+      </div>
+    </section>
+    <section
+      class="contact-section section-pad"
+      aria-labelledby="contact-heading"
+    >
+      <p class="eyebrow">Have something in mind?</p><h2 id="contact-heading">
+        Let's make<br />it work<span>.</span>
+      </h2><div class="contact-bottom">
+        <p>
+          A product to build. A workflow to improve.<br />A team ready to work
+          with AI.
+        </p><a href={enquiryUrl("project")} class="contact-cta"
+          >Discuss my project <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="action-group">
+        <a class="text-link" href={enquiryUrl("training")}>Discuss team training ↗</a>
+        <a class="text-link" href={enquiryUrl("role")}>Contact me about a role ↗</a>
+      </div>
+    </section>
+  </main>
+  <script src="../scripts/home.ts"></script>
+</Layout>

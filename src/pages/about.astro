@@ -1,0 +1,73 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { capabilities } from "../content/capabilities";
+---
+
+<Layout
+  title="About | Takunda Maswi"
+  description="Full-stack developer, AI systems builder and systems consultant based in Harare, working internationally."
+>
+  <main id="main" class="inner-page">
+    <header class="page-intro">
+      <p class="eyebrow">About Takunda</p>
+      <h1 class="display-title">Curiosity, with a working result.</h1>
+      <p class="lead">
+        I'm Takunda Maswi. I build software and AI automations, and help teams
+        use AI confidently in their everyday work.
+      </p>
+    </header>
+    <div class="reading-grid">
+      <figure class="portrait-about">
+        <img
+          src="/images/about.webp"
+          alt="An art-directed portrait of Takunda Maswi"
+          width="1024"
+          height="1536"
+        />
+        <figcaption>AI-assisted portrait, based on my photographs.</figcaption>
+      </figure>
+      <section class="prose" aria-labelledby="about-practice">
+        <h2 id="about-practice">From the problem to the product.</h2>
+        <p>
+          My work sits between engineering and the way a business actually
+          operates. Experience in accounting and consulting environments shapes
+          how I approach financial systems, internal tools, and automation.
+        </p>
+        <p>
+          I work across the full build: understanding the problem, designing an
+          interface, building the system beneath it, and checking that the
+          important paths work.
+        </p>
+        <p>
+          Some of my products begin with very local questions. How does a
+          passenger keep their change? How does a shopper find one unit inside a
+          crowded building? Those constraints make the engineering more
+          interesting.
+        </p>
+        <p>
+          I'm based in Harare, Zimbabwe, and open to international employment,
+          consulting, and product collaborations.
+        </p>
+        <a href="/contact/" class="text-link"
+          >Start a conversation <span aria-hidden="true">↗</span></a
+        >
+      </section>
+    </div>
+    <section class="service-list" aria-label="Capabilities">
+      {
+        capabilities.map((capability) => (
+          <article>
+            <>
+              <p class="eyebrow">{capability.number}</p>
+              <h2>{capability.title}</h2>
+              <p>{capability.description}</p>
+            </>
+          </article>
+        ))
+      }
+    </section>
+    <a href="/recognition/" class="text-link"
+      >Credentials <span aria-hidden="true">↗</span></a
+    >
+  </main>
+</Layout>

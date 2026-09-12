@@ -1,0 +1,4 @@
+# The Impossible Room
+Accepted palette: ink #17191B, warm stone #F2EDE5, oxblood #721D32, brushed silver #B7B9B5, selective terracotta #E07A5F. Inter and JetBrains Mono.
+The generated north-star room is a limestone gallery with a deep oxblood hinged portal. Preserve its monumental scale, frontal portrait perspective, left soft light and tactile materials. Build moving wall leaves, silver bearings, display plinth and ceiling in Three.js. Portrait is an alpha photographic plane, never a fully modeled person. Limit lateral camera travel while visible.
+Live text occupies clear negative space. Stable top navigation links Work, About, Training and Contact. One shared project installation opens into the work index and static detail pages. About uses a closer generated portrait. Recognition is a compact typographic display. Contact ends in warm light and a direct email route.

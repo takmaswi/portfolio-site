@@ -1,0 +1,32 @@
+@layer responsive {
+  .site-header nav { gap: clamp(12px, 2vw, 28px); }
+  .site-header nav a.nav-contact { background: var(--oxblood); color: var(--stone); padding: 0 16px; }
+  .action-group { display: flex; align-items: center; flex-wrap: wrap; gap: 12px 22px; margin-top: 24px; }
+  .action-button { display: inline-flex; align-items: center; justify-content: space-between; gap: 22px; min-height: 48px; padding: 13px 20px; background: var(--oxblood); color: var(--stone); font-size: 14px; font-weight: 500; }
+  .action-button:hover { background: var(--ink); }
+  .hero-copy .action-group { margin-top: 16px; gap: 8px 18px; }
+  .hero-copy .action-group .text-link { font-size: 12px; gap: 10px; }
+  .hero-work-link { display: inline-flex; align-items: center; min-height: 44px; margin-top: 4px; font-size: 12px; text-decoration: underline; text-underline-offset: 5px; }
+  .action-note { font-size: 13px; color: var(--muted); margin: 16px 0; max-width: 620px; }
+  .enquiry-options { display: grid; grid-template-columns: repeat(3, 1fr); gap: 44px; margin-bottom: 72px; }
+  .enquiry-options article { display: flex; flex-direction: column; align-items: flex-start; }
+  .enquiry-options h2 { font-size: clamp(27px, 3vw, 40px); margin-bottom: 20px; }
+  .enquiry-options p { color: var(--muted); margin-bottom: 24px; }
+  .enquiry-options .action-button { margin-top: auto; }
+  .enquiry-options .text-link { margin-top: 12px; }
+  .contact-page .enquiry-options p, .contact-page .action-note { color: var(--stone); }
+  .contact-page .enquiry-options .action-button { background: var(--stone); color: var(--ink); }
+  .contact-page .enquiry-options .action-button:hover { background: white; }
+  @media(min-width:701px) and (max-width:1100px) { .wordmark-sub { display: none; } .hero-copy { top: 21%; } .hero-copy h1 { font-size: 76px; } }
+  @media(max-width:700px) {
+    .site-header nav { justify-content: space-between; gap: 10px; }
+    .site-header nav a { min-height: 40px; }
+    .site-header nav .nav-contact { padding: 0 12px; }
+    .hero-copy, .is-reduced .hero-copy, .fallback-mode .hero-copy { top: max(116px, 16svh); }
+    .hero-copy .action-group { gap: 8px 12px; margin-top: 12px; }
+    .hero-copy .action-button { font-size: 11px; padding: 10px 12px; min-height: 44px; gap: 10px; }
+    .hero-copy .action-group .text-link { font-size: 11px; min-height: 44px; margin: 0; padding: 5px 8px; gap: 8px; }
+    .hero-work-link { background: var(--stone); padding: 0 10px; font-size: 11px; }
+    .enquiry-options { grid-template-columns: 1fr; gap: 48px; }
+  }
+}
