@@ -4,7 +4,11 @@ import { recognition } from "../src/content/recognition";
 import { contact } from "../src/content/contact";
 import { existsSync } from "node:fs";
 
-const publicCopy = JSON.stringify({ audiences, systems, searchReady });
+const publicCopy = JSON.stringify({
+  audiences,
+  systems: systems.map(({ url, ...system }) => system),
+  searchReady,
+});
 
 describe("public content safeguards", () => {
   it("keeps every system image and credential asset present", () => {
@@ -36,9 +40,20 @@ describe("public content safeguards", () => {
   });
   it("publishes no project links and no confidential client names", () => {
     expect(publicCopy).not.toMatch(/https?:\/\/|vercel\.app/i);
+    expect(
+      systems.filter((s) => s.url).map((s) => [s.slug, s.url]),
+    ).toEqual([["amayi-learn", "https://amayi-learn.vercel.app"]]);
     expect(publicCopy).not.toMatch(
       /kianga|pmrc|precise|ethical holdings|first capital|praz|benike|bushkin|nature'?s nest|cake fairy/i,
     );
+  });
+  it("lists Amayi Learn by Taku with its image and no old product name", () => {
+    const amayi = systems.find((s) => s.slug === "amayi-learn");
+    expect(amayi?.title).toBe("Amayi Learn");
+    expect(amayi?.subtitle).toBe("by Taku");
+    expect(amayi?.image).toBe("/images/work/amayi-learn.webp");
+    expect(JSON.stringify(systems)).not.toMatch(/taku[ -]?kids|takubasa/i);
+    expect(JSON.stringify(amayi)).not.toMatch(/[-–—]\s|\s[-–—]/);
   });
   it("publishes one verified professional certificate without unsupported wins", () => {
     expect(recognition[0].title).toBe("Google AI Professional Certificate");

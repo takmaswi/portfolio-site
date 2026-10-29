@@ -12,11 +12,13 @@ export interface System {
   slug: string;
   audience: AudienceId;
   title: string;
+  subtitle?: string;
   sector: string;
   summary: string;
   points: string[];
   image?: string;
   imageAlt?: string;
+  url?: string;
   featured?: boolean;
 }
 
@@ -47,7 +49,7 @@ export const audiences: Audience[] = [
     label: "Individuals",
     heading: "Apps for everyday life",
     intro:
-      "Money, shopping and getting around, designed for Zimbabwean prices, languages and patchy data.",
+      "Money, shopping, learning and getting around, designed for Zimbabwean prices, languages and patchy data.",
     alsoBuilt: [
       "A student accommodation marketplace with separate portals for students, landlords and admins",
       "A maths tutor where a maths engine holds the answer and the AI only gives hints",
@@ -260,6 +262,25 @@ export const systems: System[] = [
     image: "/images/work/svika.webp",
     imageAlt:
       "Svika on a phone showing a kombi route on a map, a five minute arrival estimate and a 1.50 dollar fare",
+  },
+  {
+    slug: "amayi-learn",
+    audience: "individuals",
+    title: "Amayi Learn",
+    subtitle: "by Taku",
+    sector: "Primary school learning",
+    summary:
+      "A safe AI learning app for children in Zimbabwe, from ECD to Grade 7. I built it end to end.",
+    points: [
+      "Mayi, an AI teacher, teaches by hints and questions",
+      "Teachers turn their scheme of work into lessons, quizzes, songs, lesson plans and marks",
+      "In English and ChiShona",
+      "Parents get safety alerts",
+    ],
+    image: "/images/work/amayi-learn.webp",
+    imageAlt:
+      "Amayi Learn by Taku logo beside the child home screen on a phone, with an illustrated Mayi reading to children and the question What shall we learn today",
+    url: "https://amayi-learn.vercel.app",
   },
 ];
 

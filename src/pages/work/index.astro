@@ -24,7 +24,7 @@ import {
       </p>
       <p class="work-note">
         Client names stay private, and some of these are still being built, so
-        I show the work itself rather than links.
+        most entries show the work itself rather than links.
       </p>
     </header>
 
@@ -84,13 +84,24 @@ import {
                 )}
                 <div class="system-body">
                   <p class="eyebrow">{system.sector}</p>
-                  <h3>{system.title}</h3>
+                  <h3>
+                    {system.title}
+                    {system.subtitle && [
+                      " ",
+                      <span class="system-subtitle">{system.subtitle}</span>,
+                    ]}
+                  </h3>
                   <p class="system-summary">{system.summary}</p>
                   <ul>
                     {system.points.map((point) => (
                       <li>{point}</li>
                     ))}
                   </ul>
+                  {system.url && (
+                    <a class="text-link system-link" href={system.url}>
+                      Open {system.title} <span aria-hidden="true">↗</span>
+                    </a>
+                  )}
                 </div>
               </article>
             ))}

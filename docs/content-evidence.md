@@ -66,3 +66,9 @@ Image sources for `public/images/work/`:
 Not captured: StockMate needs a signed in business, and seeding the live deployment would put demo data in front of its real users, so it appears as a text card. The Taku Survey quality screen and overview were not used because they show a tender study name and a client workspace label. `taku-survey\assets\dashbaord.png` is a third party Dribbble design and must never be used.
 
 No external project links appear on the Work page. Tests enforce this and block known client names.
+
+## Amayi Learn, 29 October 2026
+
+Takunda's direction: add Amayi Learn by Taku, his own product built end to end, with a public link to https://amayi-learn.vercel.app. It is the only Work entry with a link; the content test allows that one URL and still blocks links everywhere else.
+
+- `amayi-learn.webp`: composed 1600 by 1000 in the Svika phone frame style. Left: `C:\dev\taku-kids\public\kids\art\brand\amayi\amayi-learn-horizontal-transparent@2x.png`. Right: top of `C:\dev\taku-kids\docs\closeouts\taku-kids-v1\screens\phone-child-home.png`, the v1 closeout capture of the child home screen. The greeting shows the demo child name Tendai; no real child data appears.

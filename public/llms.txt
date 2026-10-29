@@ -20,4 +20,4 @@ Corporate: dual currency payroll with ZIMRA and NSSA filing (Taku Payroll), HR i
 
 Businesses: an electronics store with a back office and WhatsApp ordering, a spice shop with recipes and WhatsApp checkout, stock and sales tracking for a home food business (StockMate), a bespoke fashion storefront, a small business storefront template.
 
-Individuals: money planning in USD and ZiG (Taku Finance), indoor directions to shops (Muripi), kombi trip planning and digital tickets (Svika).
+Individuals: money planning in USD and ZiG (Taku Finance), indoor directions to shops (Muripi), kombi trip planning and digital tickets (Svika), a safe AI learning app for children from ECD to Grade 7 in English and ChiShona (Amayi Learn by Taku, https://amayi-learn.vercel.app).
