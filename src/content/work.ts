@@ -52,7 +52,7 @@ export const audiences: Audience[] = [
       "Money, shopping, learning and getting around, designed for Zimbabwean prices, languages and patchy data.",
     alsoBuilt: [
       "A student accommodation marketplace with separate portals for students, landlords and admins",
-      "A maths tutor where a maths engine holds the answer and the AI only gives hints",
+      "Takudzidza, a maths tutor where a maths engine holds the answer and the AI only gives hints",
     ],
   },
 ];

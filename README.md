@@ -2,7 +2,9 @@
 
 A static Astro portfolio built around The Impossible Room. The opening combines purpose-made portrait compositions with an authored Three.js room, directed by GSAP. Semantic HTML keeps Work, About, Training, Recognition and Contact available without completing the cinematic sequence.
 
-Live site: [portfolio-site-steel-nine-45.vercel.app](https://portfolio-site-steel-nine-45.vercel.app)
+Retired on 20 October 2026. The public portfolio is [portifoliotakunda.vercel.app](https://portifoliotakunda.vercel.app), built from the `takmaswi/portifolio_takunda` repo (Next.js, Vercel project `portifolio_takunda`). That site carries the October redesign, so it replaced this one rather than the other way round.
+
+This project's production URL, portfolio-site-steel-nine-45.vercel.app, is held on a redirect only deployment (`portfolio-site-mvg1xwe72`) that sends every path to the public portfolio. Pushes to `main` still build here, but Vercel does not assign them to that URL. Do not promote a build of this repo to production, or the redirect is lost. Product changes such as Amayi Learn go in the `portifolio_takunda` repo.
 
 ## Run locally
 
