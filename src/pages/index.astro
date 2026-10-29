@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { projects } from "../content/projects";
+import { featuredSystems as projects, systems } from "../content/work";
 import { capabilities } from "../content/capabilities";
 import { recognition } from "../content/recognition";
 import { contact, enquiryUrl } from "../content/contact";
@@ -57,9 +57,9 @@ import { contact, enquiryUrl } from "../content/contact";
         >
           <div class="installation-intro">
             <p class="eyebrow">Selected work</p><h2>
-              Ideas made<br />usable.
+              Systems that<br />do the work.
             </h2><a class="text-link" href="/work/"
-              >All {projects.length} projects <span aria-hidden="true">↗</span
+              >All {systems.length} systems <span aria-hidden="true">↗</span
               ></a>
           </div>
           <div class="project-display">
@@ -73,13 +73,13 @@ import { contact, enquiryUrl } from "../content/contact";
                 >
                   <a
                     class="installation-screen"
-                    href={`/work/${project.slug}/`}
+                    href={`/work/#${project.slug}`}
                     tabindex={index !== 0 ? -1 : undefined}
                   >
                     <img
                       src={project.image}
                       alt={project.imageAlt}
-                      width="1440"
+                      width="1600"
                       height="1000"
                       loading="eager"
                     />
@@ -88,9 +88,9 @@ import { contact, enquiryUrl } from "../content/contact";
                     <>
                       <div>
                         <>
-                          <p class="eyebrow">{project.category}</p>
+                          <p class="eyebrow">{project.sector}</p>
                           <h3>
-                            <a href={`/work/${project.slug}/`}>
+                            <a href={`/work/#${project.slug}`}>
                               {project.title}
                               <span aria-hidden="true"> ↗</span>
                             </a>

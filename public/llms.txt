@@ -1,0 +1,23 @@
+# Takunda Maswi
+
+> Full stack developer and AI systems consultant in Harare, Zimbabwe. Builds payroll, HR, compliance, research, retail and personal finance systems for companies, small businesses and individuals, and trains teams to use AI in everyday work.
+
+Contact: takmaswi@gmail.com
+GitHub: https://github.com/takmaswi
+LinkedIn: https://www.linkedin.com/in/takunda-christopher-maswi-97672045
+
+## Pages
+
+- [Work](/work/): systems grouped by corporate, business and individual users
+- [About](/about/): background and how Takunda works
+- [Training](/training/): practical AI training for teams
+- [Recognition](/recognition/): certificates and awards
+- [Contact](/contact/): project, training and role enquiries
+
+## Systems built
+
+Corporate: dual currency payroll with ZIMRA and NSSA filing (Taku Payroll), HR intelligence dashboards, performance management for a microfinance institution, enhanced due diligence and AML screening, a market research and fieldwork platform (Taku Survey).
+
+Businesses: an electronics store with a back office and WhatsApp ordering, a spice shop with recipes and WhatsApp checkout, stock and sales tracking for a home food business (StockMate), a bespoke fashion storefront, a small business storefront template.
+
+Individuals: money planning in USD and ZiG (Taku Finance), indoor directions to shops (Muripi), kombi trip planning and digital tickets (Svika).

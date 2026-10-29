@@ -40,6 +40,16 @@ const nav = [
       content={description}
     /><meta property="og:type" content="website" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      name: "Takunda Christopher Maswi",
+      jobTitle: "Full stack developer and AI systems consultant",
+      address: { "@type": "PostalAddress", addressLocality: "Harare", addressCountry: "ZW" },
+      email: `mailto:${contact.email}`,
+      sameAs: [contact.github, contact.linkedin],
+      knowsAbout: ["Payroll software", "HR analytics", "AML and due diligence screening", "Survey and fieldwork platforms", "Online stores with WhatsApp ordering", "Search engine optimisation", "AI automation", "TypeScript", "Next.js", "Python"],
+    })} />
     {
       home && (
         <link

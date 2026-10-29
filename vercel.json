@@ -7,7 +7,10 @@
           "key": "Content-Security-Policy",
           "value": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'none'"
         },
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
         {
           "key": "Referrer-Policy",
           "value": "strict-origin-when-cross-origin"
@@ -17,6 +20,48 @@
           "value": "camera=(), microphone=(), geolocation=()"
         }
       ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/work/svika",
+      "destination": "/work/#svika",
+      "permanent": true
+    },
+    {
+      "source": "/work/svika/",
+      "destination": "/work/#svika",
+      "permanent": true
+    },
+    {
+      "source": "/work/muripi",
+      "destination": "/work/#muripi",
+      "permanent": true
+    },
+    {
+      "source": "/work/muripi/",
+      "destination": "/work/#muripi",
+      "permanent": true
+    },
+    {
+      "source": "/work/bushkin",
+      "destination": "/work/#fashion-storefront",
+      "permanent": true
+    },
+    {
+      "source": "/work/bushkin/",
+      "destination": "/work/#fashion-storefront",
+      "permanent": true
+    },
+    {
+      "source": "/work/taku-cake",
+      "destination": "/work/#cake-storefront",
+      "permanent": true
+    },
+    {
+      "source": "/work/taku-cake/",
+      "destination": "/work/#cake-storefront",
+      "permanent": true
     }
   ]
 }

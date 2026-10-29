@@ -44,3 +44,25 @@ Chromium through Playwright, clean signed-out browser contexts, 1440 x 1000 view
 These PNGs are new source captures only. Public portfolio WebP files were not replaced by this follow-up. Original project captures were not overwritten.
 
 tests/content.test.ts was written before content modules. Two initial attempts could not start because the parent dependency installation was not yet available: vitest was not recognized. Content implementation continued without pretending this was a behavioral red test. After installation, the initial four tests passed. The new award safeguard test was then written first and failed as expected because the award was absent (four pass, one fail), before award implementation. The parent task must verify rendered pages and imagery in the browser.
+
+## Work page rebuild, 16 September 2026
+
+Takunda's direction: group the work by who uses it (Corporate, Businesses, Individuals), lead with Taku Payroll, Taku Finance and Muripi, show images instead of links because several builds are unfinished, keep client names out of the copy, and explain that the sites are built as systems that bring customers back and get found in search and AI answers. Old detail routes redirect to anchors on /work/.
+
+Image sources for `public/images/work/`:
+
+- `payroll.webp`: `Idea Hub\Anti-Gravity\Taku-Payroll\phase5a-dashboard-1440.png`, 9 September 2026 capture, synthetic test company.
+- `hr-intelligence.webp`: `Idea Hub\Anti-Gravity\HRI-demo-with-dashboard\reference images\screencapture-localhost-5173-dashboard-compensation-2026-03-24-14_10_36.png`. Sidebar with the client brand cropped out. Demo dataset.
+- `performance.webp`: `Idea Hub\Claude\PMS Tobaco\test-results\polish-audit\admin-home.png`, 25 May 2026. Neutral Taku Consulting branding. Development badge cropped out.
+- `compliance.webp`: `Idea Hub\Claude\AML Data Platform\visuals\01-architecture-data-factory.png`. A system design diagram, not an application screenshot.
+- `research.webp`: fresh capture 16 September 2026 of the Taku Survey results dashboard for the seeded "Retail banking customer satisfaction" study, signed in with the documented shared demo account. Top section only, so no live response names or tender study names appear.
+- `electronics-store.webp`: `Benike Technologies\benike-store\_reports\cloudflare\home-desktop-cf.png`, 16 September 2026.
+- `spice-store.webp`: `Natures Nest\site\review\walk-basket-1280.png`.
+- `fashion-storefront.webp` and `cake-storefront.webp`: the previous portfolio images, recropped.
+- `finance.webp`: fresh capture 16 September 2026 of Taku Finance in guest mode, Business pricing tool with example inputs, 390 px phone viewport.
+- `svika.webp`: fresh capture 16 September 2026 of https://svika-web.vercel.app/app, signed out, 390 px phone viewport.
+- `muripi.webp`: fresh capture 16 September 2026 of https://muripi.vercel.app home. The route step photographs were not used because the recorded walk shows the inside of a private home. The Android interface changed on 15 September 2026 and needs a phone screenshot from Takunda to replace this web image.
+
+Not captured: StockMate needs a signed in business, and seeding the live deployment would put demo data in front of its real users, so it appears as a text card. The Taku Survey quality screen and overview were not used because they show a tender study name and a client workspace label. `taku-survey\assets\dashbaord.png` is a third party Dribbble design and must never be used.
+
+No external project links appear on the Work page. Tests enforce this and block known client names.
